@@ -1,9 +1,20 @@
 // import models
 const User = require('./User');
-const UserWorkout = require('./UserWorkout');
+const UserWorkout = require('./Workout');
 const Exercises = require('./Exercises');
 const ExerciseLog = require('./ExerciseLog');
 const WorkoutSessionTracker = require('./WorkoutSessionTracker');
+
+//UserWorkout belongsToOne User
+//User hasMany UserWorkout
+//Exercises BelongsToMany UserWorkouts
+//Userworkout hasMany Exercises
+//WorkoutSessionTracker hasOne UserWorkout
+//UserWorkout belongsToMany WorkoutSessionTracker
+//ExerciseLog belongsToOne WorkoutSessionTracker
+//ExerciseLog belongsToOne UserWorkout
+//ExerciseLog hasMany Exercises
+//Exercises belongsToMany ExerciseLog
 
 module.exports = {
   User,

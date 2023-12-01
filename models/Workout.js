@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
-class UserWorkout extends Model {}
+class Workout extends Model {}
 
-UserWorkout.init(
+Workout.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -32,8 +32,8 @@ UserWorkout.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'userWorkout',
+    modelName: 'Workout',
   }
 );
 
-module.exports = UserWorkout;
+module.exports = Workout;

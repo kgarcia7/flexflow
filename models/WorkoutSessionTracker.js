@@ -16,7 +16,7 @@ WorkoutSessionTracker.init(
     workout_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'userWorkout',
+        model: 'Workout',
         key: 'id'
       }
     }, 
