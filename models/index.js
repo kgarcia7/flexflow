@@ -1,9 +1,18 @@
 // import models
-const Product = require('./Product');
-const Category = require('./Category');
-const Tag = require('./Tag');
-const ProductTag = require('./ProductTag');
+const User = require('./User');
+const UserWorkout = require('./UserWorkout');
+const WorkoutSession = require('./WorkoutSession');
+const Exercises = require('./Exercises');
+const WorkoutSessionTracker = require('./WorkoutSessionTracker');
 
+module.exports = {
+  User,
+  UserWorkout,
+  WorkoutSession,
+  Exercises,
+  WorkoutSessionTracker
+};
+/*
 // Products belongsTo Category
 Product.belongsTo(Category, {
   foreignKey: 'category_id',
@@ -37,3 +46,4 @@ module.exports = {
   Tag,
   ProductTag,
 };
+*/
