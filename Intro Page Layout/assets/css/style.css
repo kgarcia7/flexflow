@@ -31,6 +31,8 @@ h6{
 h2,h3,h4,h5 {
     margin-bottom: 10px;
     text-align: center;
+    font-size: 15px;
+    padding: 20px;
     
 }
 
@@ -87,19 +89,19 @@ nav ul li a:hover {
 /* Style the hero container */
 .hero-section {
     position: relative;
-    height: 100vh;
+    height: 90vh;
     background: url('../images/fitnessintroimage.png') center/cover no-repeat;
     color: white; /* text color on top of the image */
     display: flex;
     align-items: center;
-    justify-content: center; /* Change from flex-start to center */
-    text-align: center; /* Center-align text */
+    justify-content: center;
+    text-align: center;
     padding: 20px;
     box-sizing: border-box;
 }
 
 .quote {
-    max-width: 900px; /* adjust as needed */
+    max-width: 1020px; /* adjust as needed */
     font-size: 2.8rem; /* adjust as needed */
     font-style: italic;
     line-height: 1.5;
