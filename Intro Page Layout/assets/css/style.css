@@ -3,41 +3,17 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family:'Poppins', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 body {
     background-color: white;
 }
 
-h2,h3,h4,h5 {
-    margin-bottom: 10px;
-    text-align: center;
-    
-}
-
-p {
-    font-size: 16px;
-    text-align: center;
-}
-
-
 h1 {
     display: inline-block;
     font-size: 48px;
 }
-
-h3{
-    color: white;
-}
-
-h4{
-    color:#292A6B;
-    font-size: 36px;
-}
-
-
-
 
 h5{
     font-size: 24px;
@@ -52,16 +28,28 @@ h6{
     padding: 20px;
 }
 
+h2,h3,h4,h5 {
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+
+p {
+    font-size: 16px;
+    text-align: center;
+}
+
+
 
 /* Style Header */
 header {
     padding: 30px;
-    background-color: #98DED9;
-    color: #292A6B;
+    background-color: #d4ff02;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 139px;
+    height: 100px;
 }
 
 /* Style Navigation Bar */
@@ -84,7 +72,7 @@ a {
 }
 
 nav ul li a:hover {
-    background-color: #292A6B;
+    background-color: black;
     color: white;
     border-radius: 30px;
     padding: 12px;
@@ -97,72 +85,27 @@ nav ul li a:hover {
 }
 
 /* Style the hero container */
-.hero-container {
+.hero-section {
     position: relative;
+    height: 100vh;
+    background: url('../images/fitnessintroimage.png') center/cover no-repeat;
+    color: white; /* text color on top of the image */
     display: flex;
     align-items: center;
-    background-color: #CBDFE8; 
-    color: #fff;
-    min-height: 400px; 
-    overflow: hidden; 
+    justify-content: center; /* Change from flex-start to center */
+    text-align: center; /* Center-align text */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Style the hero image */
-.hero-container img {
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    object-fit: cover; 
+.quote {
+    max-width: 900px; /* adjust as needed */
+    font-size: 2.8rem; /* adjust as needed */
+    font-style: italic;
+    line-height: 1.5;
+    margin: 0;
 }
 
-/* Style the hero content */
-.hero-content {
-    padding: 70px;
-    margin-left: 60px;
-    max-width: 50%;
-    background-color: #CBDFE8; 
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #292A6B;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #292A6B;
-    text-align: left;
-}
-
-.Hero {
-    display: inline-block;
-    height: 522px;
-    width: 100%;
-    background-size: cover;
-    background-position: left;
-}
-
-/* Style the Hero button */
-.cta-button {
-    display: inline-block;
-    padding: 10px 40px;
-    background-color: #98DED9; 
-    color: #292A6B; 
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #292A6B;
-    color:#98DED9;
-}
-
-.category-title {
-    white-space: nowrap;
-  }
 
 /* Style First Info Sectiom */
 .first-section{
@@ -171,10 +114,10 @@ nav ul li a:hover {
 }
 
 #content-text{
-    color: white;
+    color: black;
     padding: 60px 100px;
     height: auto;
-    background-color: #292A6B;
+    background-color: #a6a6a6;
     font-size: 20px;
 }
 
@@ -184,329 +127,18 @@ nav ul li a:hover {
 
 /* Style Second Info Section */
 .second-section{
-    color: #292A6B;
-    background-color: #98DED9;
+    color: #d4ff02;
+    background-color: black;
     padding: 100px;
     height: auto;
     text-align: center;
 }
 
-/*Style Team Section*/
-.categories {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-  }
-  
-.team-category {
-    text-align: center;
-    width: 200px;
-    height: auto;
-    margin: 50px;
-}
-  
- .team-category img {
-    width: 120%;
-    height: auto;
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    margin-bottom: 20px;
-  }
 
-.team-member-title{
-    color: black;
-    font-size: 15px;
-    padding: 15px;
-}
-
-.team-members{
-    color: #292A6B;
-    background-color: white;
-    padding: 60px;
-    height: auto;
-    text-align: center;
-}
-
-.team-member-description {
-    margin: 0; 
-}
-
-#team-members h4{
-    margin-top: 40px;
-}
-
-/*Style Testimonials*/
-.first-testimonial{
-    width: 100%;
-    height: auto;
-    background-color: #292A6B;
-    background-image: url(".assets/images/pexels-tima-miroshnichenko-6389079.jpg");
-}
-
-.second-testimonial{
-    width: 100%;
-    height: auto;
-    background-color: #292A6B;
-    background-image: url(".assets/images/pexels-tima-miroshnichenko-6389079.jpg");
-}
-
-.testimonial-context{
-   color: white;
-   font-size: 25px;
-   padding: 90px;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-
-/*Style How Can We Help Section*/
-.help-section {
-    height: auto; 
-    background-color: #98DED9;
-    padding: 20px;
-    text-align: center; 
-}
-
-#help-title {
-    margin-top: 30px;
-    margin-bottom: 20px; 
-}
-
-.help-categories {
-    display: flex;
-    justify-content: space-evenly; 
-    align-items: center;
-    padding: 0px;
-}
-
-.help-category {
-    text-align: center;
-    width: 300px;
-    }
-
-.help-category img {
-    width: 50%; 
-    height: auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.help-categories {
-    display: flex;
-    justify-content: space-between; /* Or use justify-content: center; for centering the children */
-  }
-  
-  .help-category {
-    flex-basis: calc(50% - 30px); /* Set the width of each child element */
-    flex-grow: 1;
-    margin: 15px; /* Optional margin between the child elements*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-      
-
-.help-section p{
-    font-size: 20px;
-}
-
-/* Style CTA button in Help Section*/
-.cta-button2 {
-    display: inline-block;
-    padding: 10px 40px;
-    margin-top: 25px;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-}
-
-a.cta-button2{
-    background-color: #292A6B; 
-    color: white;
-}
-
-a.cta-button2:hover {
-    background-color: white;
-    color:#292A6B;
-}
-
-
-/* Style Values and Beliefs Section*/
-#values-beliefs{
-    background-color: #98DED9;
-    height: auto;
-    padding: 50px;
-}
-
-.value-categories {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-  }
-  
-.category {
-    text-align: center;
-    width: 176px; 
-    margin-right: 100px;
-  }
-  
- .category img {
-    width: 100%;
-    height: auto;
-  }
-
-.caption{
-    color: black;
-    font-size: 20px;
-}
-
-
-
-/* Style Latest News section */
-#news-section{
-    padding: 20px;
-    margin-bottom: 20px;
-}
-.news-categories {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-  }
-  
-.news-category {
-    text-align: center;
-    width: 176px; 
-    margin-right: 100px;
-  }
-  
- .news-category img {
-    width: 150%;
-    height: auto;
-    padding: 20px;
-    margin: 0 auto;
-  }
-
-  .news-section h4{
-    font-size: 18px;
-  }
-
-/* Style the Call to Action (CTA) button in Help Section*/
-.cta-button3 {
-    display: inline-block;
-    padding: 10px 40px;
-    margin-top: 15px;
-    background-color: #98DED9; 
-    color: #292A6B;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button3:hover {
-    background-color: #292A6B;
-    color: #98DED9;
-}
-
-/* Style Podcast */
-.podcast {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 70px;
-    max-width: 100%;
-    background-color: #98DED9;
-}
-
-.cta-button2 {
-    display: inline-block;
-    padding: 10px 40px;
-    background-color: #292A6B;
-    color: #98DED9;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button2:hover {
-    background-color: #98DED9;
-    color: #292A6B;
-}
-
-
-/*Style Sign Up*/
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 50px;
-    text-align: center;
-    border-radius: 5px;
-    background-color: #161D6F;
-    color: #98DED9;
-
-    font-size: 25px;
-}
-
-.submit-btn{
-    background-color: #98DED9;
-    border-radius: 50px;
-    padding: 10px 25px;
-    border-color: white;
-    border: none;
-    margin-left: 15px;
-}
-
-.btn-text{
-    color: #161D6F;
-    font-size: 24px;
-}
-
-#signup-form{
-    background-color: white;
-    border-radius: 50px;
-    padding: 10px;
-    margin: 0px 200px;
-    height: auto;
-}
-
-#newsletter-txt{
-    color: white;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 200;
-     margin-bottom: 15px;
-    padding: 0px;
-}
-
-input[type="email" i] {
-    max-width: 100%;
-    max-height: 100%;
-}
-  
-.Times {
-    display: flex;
-    color: #98DED9;
-    font-size: 42px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-    justify-content: center; 
-    align-items: center;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 25px;
-    text-align: center;
-    background-color: #161D6F;
-    display: block;
-    margin-block-start: 1.33em;
-    font-weight: bold;
-}
-
-.article {
-    padding: 25px;
-}
 /*Style Footer*/
 .footer{
     background-color: white;
-    color: #292A6B;
+    color: black;
     height: auto;
     text-align: center;
     padding-bottom: 20px;
