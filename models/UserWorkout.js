@@ -2,28 +2,38 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
-class Tag extends Model {}
+class UserWorkout extends Model {}
 
-Tag.init(
+UserWorkout.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    tag_name:{
-      type: DataTypes.STRING
-    }
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model:'user',
+        key:'id'
+      }
+    },
+    exercise_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'exercises',
+        id: 'id'
+      }
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'tag',
+    modelName: 'userWorkout',
   }
 );
 
-module.exports = Tag;
+module.exports = UserWorkout;

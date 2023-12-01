@@ -1,16 +1,16 @@
 // import models
 const User = require('./User');
 const UserWorkout = require('./UserWorkout');
-const WorkoutSession = require('./WorkoutSession');
 const Exercises = require('./Exercises');
+const ExerciseLog = require('./ExerciseLog');
 const WorkoutSessionTracker = require('./WorkoutSessionTracker');
 
 module.exports = {
   User,
   UserWorkout,
-  WorkoutSession,
   Exercises,
-  WorkoutSessionTracker
+  WorkoutSessionTracker,
+  ExerciseLog
 };
 /*
 // Products belongsTo Category
@@ -39,11 +39,4 @@ Tag.belongsToMany(Product, {
   },
    as: 'tag_list'
 });
-
-module.exports = {
-  Product,
-  Category,
-  Tag,
-  ProductTag,
-};
 */

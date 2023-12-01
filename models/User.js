@@ -11,6 +11,7 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
+      unique: true
     },
     first_name: {
       type: DataTypes.STRING,
@@ -33,8 +34,8 @@ User.init(
       allowNull: false,
       unique: true,
       validate: {
-        len: [8],
-        is: /^[a-z]+$/i 
+        len: [8,20],
+        is: /^[a-z0-9A-Z!@#$%&]+$/i 
       }
     }
   },
@@ -43,7 +44,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'User',
+    modelName: 'user',
   }
 );
 
