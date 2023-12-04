@@ -19,13 +19,12 @@ Workout.init(
         key:'id'
       }
     },
-    exercise_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'exercises',
-        id: 'id'
-      }
+    workout_name: {
+      type: DataTypes.STRING,
     },
+    description: {
+      type: DataTypes.STRING
+    }
   },
   {
     sequelize,

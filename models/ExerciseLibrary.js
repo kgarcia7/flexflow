@@ -3,9 +3,9 @@ const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
 
-class Exercises extends Model {}
+class ExerciseLibrary extends Model {}
 
-Exercises.init(
+ExerciseLibrary.init(
   {
     // define columns
     id: {
@@ -39,8 +39,8 @@ Exercises.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'exercises',
+    modelName: 'ExerciseLibrary',
   }
 );
 
-module.exports = Exercises;
+module.exports = ExerciseLibrary;

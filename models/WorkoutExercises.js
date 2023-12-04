@@ -2,14 +2,16 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
-class ExerciseLog extends Model {}
+class WorkoutExercises extends Model {}
 
-///sets are represented by rows 
-ExerciseLog.init(
+//tracks history of workouts
+WorkoutExercises.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
+      unique: true
     },
     workout_id: {
       type: DataTypes.INTEGER,
@@ -18,18 +20,24 @@ ExerciseLog.init(
         key: 'id'
       }
     }, 
-    date: {
-      type: DataTypes.DATE
-  },
-  
+    exercise_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'ExerciseLibrary',
+            key: 'id'
+        }
+    },
+    exercise_data: {
+      type: DataTypes.JSON 
+    },
 },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'ExerciseLog',
+    modelName: 'WorkoutExercises',
   }
 );
 
-module.exports = ExerciseLog;
+module.exports = WorkoutExercises;
