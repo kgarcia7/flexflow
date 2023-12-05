@@ -1,8 +1,8 @@
-const sequelize = require('./config/connection');
-const WorkoutExercises = require('./models/WorkoutExercises');
-const Exercises = require('./models/Exercises');
-const Workout = require('./models/Workout');
-const User = require('./models/User');
+const sequelize = require('../config/connection');
+const WorkoutExercises = require('../models/WorkoutExercises');
+const Exercises = require('../models/Exercises');
+const Workout = require('../models/Workout');
+const User = require('../models/User');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
