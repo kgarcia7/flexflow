@@ -1,3 +1,17 @@
+/* Default styling*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+
 /* Style Header */
 header {
     padding: 30px;
@@ -6,7 +20,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 120px;
+    height: 10vh;
+    width: 100%;
 }
 
 /* Style Navigation Bar */
@@ -40,26 +55,31 @@ nav ul li a:hover {
     height: 139px;
     /* max-height: 100%; */
 }
-
 body {
     font-family: 'Lato', sans-serif;
     background-color: black;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     background: url('../images/loginbackgroundimage.jpg') center/cover no-repeat;
     height: 100vh;
     overflow: hidden;
 }
 
-
 #signup-form {
-    background-color: #fff;
-    padding: 20px;
+    background-color: black;
+    color: white;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 450px;
+    width: 50%; 
+}
+
+h2{
+    text-align: center;
 }
 
 label {
@@ -70,15 +90,15 @@ label {
 
 input {
     width: 100%;
-    padding: 8px;
+    padding: 10px 5px;
     margin-bottom: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 button {
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #d4ff02;
+    color: black;
     padding: 10px;
     border: none;
     border-radius: 4px;
@@ -86,5 +106,6 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: black;
+    color: white;
 }
