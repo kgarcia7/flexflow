@@ -69,13 +69,13 @@ body {
 .container {
     background-color: black;
     color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 30%;
-    margin: 20px auto; /* Center the container and provide some top margin */
+    width: 40%;
+    margin: 30%; /* Center the container and provide some top margin */
     font-family: 'Lato',sans-serif;
+    text-align: center;
 }
 
 form {
@@ -85,23 +85,28 @@ form {
 }
 
 label {
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 input {
     margin-bottom: 15px;
     padding: 8px;
-    width: 100%;
+    width: 50%;
     box-sizing: border-box;
+}
+
+h2{
+    margin-bottom: 10px;
 }
 
 button {
     background-color: #d4ff02;
     color: black;
-    padding: 10px;
+    padding: 10px 30px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .signup-option {
