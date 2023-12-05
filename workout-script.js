@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const app = document.getElementById("app");
     const workoutList = document.getElementById("workout-list");
     const exerciseDropdown = document.getElementById("exercise-dropdown");
+    const repsInput = document.getElementById("reps");
+    const setsInput = document.getElementById("sets");
 
     // Extract the date parameter from the URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -33,13 +35,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add an event listener for a button to add a new workout entry
     app.querySelector("#addWorkout").addEventListener("click", () => {
         const selectedExercise = exerciseDropdown.value;
+        const reps = repsInput.value.trim();
+        const sets = setsInput.value.trim();
+
         if (selectedExercise) {
             const workoutEntry = {
                 date: selectedDate,
-                exercises: []  // Array to store individual exercises
+                exercises: [{ name: selectedExercise, reps, sets }]  // Array to store individual exercises
             };
 
-            workoutEntry.exercises.push(selectedExercise);
             updateWorkoutList();
         }
     });
@@ -52,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (entry.date === selectedDate) {
                 entry.exercises.forEach((exercise, index) => {
                     const exerciseItem = document.createElement("div");
-                    exerciseItem.textContent = `${index + 1}. ${exercise}`;
+                    exerciseItem.textContent = `${index + 1}. ${exercise.name} - Reps: ${exercise.reps}, Sets: ${exercise.sets}`;
                     workoutList.appendChild(exerciseItem);
                 });
             }
