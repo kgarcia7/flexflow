@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-const dayjs = require('dayjs')
 const exphbs = require('express-handlebars');
 
 const app = express();
@@ -31,8 +30,8 @@ app.get("/login", (req, res) => {
 
 
 // profile page route
-app.get("/profile", (req, res) => {
-  res.render("profile")
+app.get("/signup", (req, res) => {
+  res.render("signup")
 })
 
 
