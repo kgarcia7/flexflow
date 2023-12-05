@@ -11,7 +11,7 @@ WorkoutExercises.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      unique: true
+      autoIncrement: true
     },
     workout_id: {
       type: DataTypes.INTEGER,
@@ -23,12 +23,12 @@ WorkoutExercises.init(
     exercise_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'ExerciseLibrary',
+            model: 'Exercises',
             key: 'id'
         }
     },
     exercise_data: {
-      type: DataTypes.JSON 
+      type: DataTypes.JSON
     },
 },
   {

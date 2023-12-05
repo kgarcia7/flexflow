@@ -1,7 +1,7 @@
 // import models
 const User = require('./User');
 const Workout = require('./Workout');
-const ExerciseLibrary = require('./ExerciseLibrary');
+const Exercises = require('./Exercises');
 const ExerciseLog = require('./ExerciseLog');
 const WorkoutSessionTracker = require('./WorkoutSessionTracker');
 const WorkoutExercises = require('./WorkoutExercises');
@@ -17,7 +17,7 @@ User.hasMany(Workout, {
   onDelete: 'CASCADE',
 });
 //WorkoutExercises BelongsTo Exercise library
-WorkoutExercises.belongsTo(ExerciseLibrary, {
+WorkoutExercises.belongsTo(Exercises, {
   through: {
     model: Workout,
     unique: 'false'
@@ -27,7 +27,7 @@ WorkoutExercises.belongsTo(ExerciseLibrary, {
 //workoutExercises belongsToMany workout
 WorkoutExercises.belongsToMany(Workout, {
   through: {
-    model: ExerciseLibrary,
+    model: Exercises,
     unique: false
   },
   as: 'exercise_list'
@@ -63,7 +63,7 @@ ExerciseLog.belongsTo(WorkoutSessionTracker, {
 module.exports = {
   User,
   Workout,
-  ExerciseLibrary,
+  Exercises,
   WorkoutSessionTracker,
   ExerciseLog
 };
