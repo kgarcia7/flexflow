@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page.css">
+    <title>Workout Planner</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Workout Planner - Selected Date</h1>
+
+         <!-- Dropdown menu for predefined exercises -->
+         <label for="exercise-dropdown">Select Exercise:</label>
+         <select id="exercise-dropdown"></select>
+ 
+         <!-- Input fields for reps and sets -->
+         <label for="reps">Reps:</label>
+         <input type="number" id="reps" placeholder="Enter reps">
+ 
+         <label for="sets">Sets:</label>
+         <input type="number" id="sets" placeholder="Enter sets">
+ 
+
+        <!-- Button to add workout -->
+        <button id="addWorkout">Add Workout</button>
+
+        <!-- Display list of workouts -->
+        <div id="workout-list"></div>
+    </div>
+
+    <script src="workout-script.js"></script>
+</body>
+</html>

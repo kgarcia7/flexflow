@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#app {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+select, input, button {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#workout-list {
+    margin-top: 20px;
+}
+
+#workout-list div {
+    margin-bottom: 5px;
+}
+
+/* Styling for the workout tracker table */
+.tracker {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tracker th, .tracker td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tracker th {
+    background-color: #4caf50;
+    color: white;
+}
+
+.tracker__date, .tracker__workout, .tracker__duration {
+    width: 80px; /* Adjust width as needed */
+}
+
+/* Styling for the days of the week */
+.day {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.current-day {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Go Back and Logout buttons */
+#nav-buttons {
+    margin-top: 20px;
+}
+
+#nav-buttons button {
+    margin-right: 10px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#goBack, #logout {
+    padding: 5px;
+}
