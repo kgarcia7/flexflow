@@ -1,9 +1,13 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const app = document.getElementById("app");
     const workoutList = document.getElementById("workout-list");
     const exerciseDropdown = document.getElementById("exercise-dropdown");
     const repsInput = document.getElementById("reps");
     const setsInput = document.getElementById("sets");
+    const goBackButton = document.getElementById("goBack");
+    const logoutButton = document.getElementById("logout");
 
     // Extract the date parameter from the URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -21,10 +25,16 @@ document.addEventListener("DOMContentLoaded", function () {
         this.entries.push(data);
         this.saveEntries();
         this.updateView();
+        updateWorkoutList(); // Call the updateWorkoutList function after adding an entry
     };
 
     // Populate dropdown with predefined exercises
-    const predefinedExercises = ['Running', 'Walking', 'Cycling', 'Swimming', 'Yoga'];
+    const predefinedExercises = [
+        'Bench Press', 'Push-ups', 'Dumbbell Curls', 'Tricep Dips',
+        'Chest Fly', 'Hammer Curls', 'Skull Crushers', 'Tricep Kickbacks'
+        // Add more exercises as needed
+    ];
+
     predefinedExercises.forEach(exercise => {
         const option = document.createElement('option');
         option.value = exercise;
@@ -38,13 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const reps = repsInput.value.trim();
         const sets = setsInput.value.trim();
 
-        if (selectedExercise) {
+        if (selectedExercise && reps !== "" && sets !== "") {
             const workoutEntry = {
                 date: selectedDate,
                 exercises: [{ name: selectedExercise, reps, sets }]  // Array to store individual exercises
             };
 
-            updateWorkoutList();
+            wt.addEntry(workoutEntry); // Call the addEntry method
         }
     });
 
@@ -62,4 +72,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     };
+
+    // Go Back button functionality
+    if (goBackButton) {
+        goBackButton.addEventListener("click", () => {
+            // Add your go back functionality here
+            // For example, redirect to the previous page
+            window.history.back();
+        });
+    }
+
+    // Logout button functionality
+    if (logoutButton) {
+        logoutButton.addEventListener("click", () => {
+            // Add your logout functionality here
+            // For example, redirect to a logout page or clear user session
+            window.location.href = "logout.html";
+        });
+    }
 });
