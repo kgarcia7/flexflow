@@ -47,9 +47,9 @@ As a coding bootcamp student, I want to collaborate with my team to create a ful
 - Sequelize ORM
 
 ## Screenshot
-![Alt text](<Screenshot 2023-12-05 at 12.11.21 PM.png>)
-![Alt text](<Screenshot 2023-12-05 at 12.16.15 PM-2.png>)
-![Alt text](<Screenshot 2023-12-05 at 12.16.43 PM.png>)
+![image](https://github.com/kgarcia7/flexflow/assets/141987295/cd0b3d96-fbc2-449b-84ec-9a186a004a62)
+![image](https://github.com/kgarcia7/flexflow/assets/141987295/e6556e76-cfec-4bc2-b59c-c9081acc1bdf)
+![image](https://github.com/kgarcia7/flexflow/assets/141987295/219d6402-e6f2-4494-9b45-9b9ab83ec3bd)
 
 ## Deployed Application 
 (Link to Heroku)
