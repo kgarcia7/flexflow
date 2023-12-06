@@ -29,7 +29,7 @@ app.get("/login", (req, res) => {
 })
 
 
-// profile page route
+// sign-up page route
 app.get("/signup", (req, res) => {
   res.render("signup")
 })
