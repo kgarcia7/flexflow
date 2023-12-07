@@ -226,7 +226,7 @@ button {
     overflow: hidden;
 }
 
-#signup-form {
+#signup-holder {
     background-color: black;
     color: white;
     padding: 30px;
@@ -236,17 +236,17 @@ button {
     width: 30%; 
 }
 
-#signup-form h2{
+#signup-holder h2{
     text-align: center;
 }
 
-#signup-form label {
+#signup-holder label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-#signup-form input {
+#signup-holder input {
     width: 100%;
     padding: 10px 5px;
     margin-bottom: 16px;
@@ -254,7 +254,7 @@ button {
     border-radius: 4px;
 }
 
-#signup-form button {
+#signup-holder button {
     background-color: #d4ff02;
     color: black;
     padding: 10px;
@@ -263,7 +263,7 @@ button {
     cursor: pointer;
 }
 
-#signup-form button:hover {
+#signup-holder button:hover {
     background-color: white;
     color: black;
 }
@@ -357,3 +357,5 @@ button {
         padding: 50px;
     }
 }
+
+
