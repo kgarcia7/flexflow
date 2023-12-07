@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentDate = new Date();
 
     // Predefined workout options
-    const workoutOptions = ['Legs', 'Chest', 'Arms', 'Cardio', 'Other'];
+    const workoutOptions = ['Bicep Curl', 'Bench Press', 'Dumbell Row', 'Cable Row', 'Squat','Weighted Dips'];
 
     // Display days of the week with dates
     daysOfWeek.forEach((day, index) => {
@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 };
 
                 addRow(entry);
+                saveEntriesToLocalStorage(); // Save entries to local storage
                 clearInputs();
             }
         });
@@ -115,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Event listener for deleting entry
             row.querySelector(".tracker__delete").addEventListener("click", () => {
                 deleteEntry(row);
+                saveEntriesToLocalStorage(); // Save entries to local storage after deletion
             });
 
             // Append the row to the table body
@@ -151,6 +153,32 @@ document.addEventListener("DOMContentLoaded", function () {
                 </tr>
             `;
         };
+
+        // Load entries from local storage when the page is loaded
+        loadEntriesFromLocalStorage();
+
+        // Helper function to save entries to local storage
+        function saveEntriesToLocalStorage() {
+            const entries = Array.from(table.querySelectorAll(".tracker__row"))
+                .map(row => ({
+                    workout: row.querySelector(".tracker__workout").textContent,
+                    duration: row.querySelector(".tracker__duration").textContent,
+                    weight: row.querySelector(".tracker__weight").textContent,
+                    sets: row.querySelector(".tracker__sets").textContent,
+                    reps: row.querySelector(".tracker__reps").textContent,
+                }));
+
+            localStorage.setItem(getDateString(index), JSON.stringify(entries));
+        }
+
+        // Helper function to load entries from local storage
+        function loadEntriesFromLocalStorage() {
+            const savedEntries = localStorage.getItem(getDateString(index));
+            if (savedEntries) {
+                const entries = JSON.parse(savedEntries);
+                entries.forEach(entry => addRow(entry));
+            }
+        }
     });
 
     // Logout button functionality
