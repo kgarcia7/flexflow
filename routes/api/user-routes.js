@@ -41,13 +41,24 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', async(req, res) => {
-  // create a new User
+router.post('/signup', async (req, res) => {
   try {
-    const userData = await User.create(req.body);
-    res.status(200).json(userData);
+    const dbUserData = await User.create({
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      email: req.body.email,
+      password: req.body.password,
+    });
+
+    // Set up sessions with a 'loggedIn' variable set to `true`
+    req.session.save(() => {
+      req.session.loggedIn = true;
+
+      res.status(200).json(dbUserData);
+    });
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 

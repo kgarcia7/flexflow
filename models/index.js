@@ -13,7 +13,7 @@ Workout.belongsTo(User, {
 });
 //User hasMany Workout
 User.hasMany(Workout, {
-  foreignKey: 'workout_name',
+  foreignKey: 'user_id',
   onDelete: 'CASCADE',
 });
 //WorkoutExercises BelongsTo Exercise library
