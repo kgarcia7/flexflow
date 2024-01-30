@@ -1,6 +1,6 @@
 # flexflow
 
-# Description
+## Description
 A collaborative full-stack application that addresses a real-world problem using a robust back end with servers, databases, advanced APIs, and user authentication. This project builds on agile development methodologies, including GitHub for version control, project management tools, and Git branch workflow for feature and bug fixes. The application's front end is developed from scratch, emphasizing reinforced skills and a stronger foundation.
 
 ## User Story
